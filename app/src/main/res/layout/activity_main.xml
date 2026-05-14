@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="AudioShare"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wireless Audio Streamer"
+        android:textColor="#666666"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1A1A1A"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Status Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#111111"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/statusDot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="#333333"/>
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Searching..."
+                android:textColor="#AAAAAA"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/serverIpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Server: —"
+            android:textColor="#555555"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+    <!-- Stats Grid -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <!-- Packets Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#111111"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_marginEnd="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PACKETS"
+                android:textColor="#444444"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/packetCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Latency Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#111111"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_marginStart="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LATENCY"
+                android:textColor="#444444"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/latencyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="— ms"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Audio Format Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#111111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAMPLE RATE"
+                android:textColor="#444444"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/sampleRateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="— Hz"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BIT DEPTH"
+                android:textColor="#444444"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/bitDepthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHANNELS"
+                android:textColor="#444444"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/channelsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Dropped Packets Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#111111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DROPPED PACKETS"
+                android:textColor="#444444"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/droppedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DATA RECEIVED"
+                android:textColor="#444444"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:id="@+id/dataText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 KB"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Footer -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:text="v1.0 • UDP • Local Network"
+        android:textColor="#333333"
+        android:textSize="11sp"/>
+
+</LinearLayout>
